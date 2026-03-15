@@ -1,11 +1,7 @@
-// This is your Prisma schema file,
-// learn more about it in the docs: https://pris.ly/d/prisma-schema
-
-// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
-// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
-
-datasource db {  //  تعريف قاعدة البيانات
-  provider = "postgresql" // نوع قاعدة البيانات
+//   تعريف قاعدة البيانات ونوعها
+datasource db {  
+  provider = "postgresql" 
+  url      = env("DATABASE_URL")
 }
 
 generator client {
@@ -18,8 +14,25 @@ model User {
   lastName  String
   email     String    @unique
   password  String
+  avatar    String? 
+  budget    Float?
+
   expenses  Expense[]
+  categories Category[]
+  fixedExpenses FixedExpense[]
   createdAt DateTime  @default(now())
+}
+
+model Category {
+  id        Int       @id @default(autoincrement())
+  name      String
+
+  userId    Int?
+  user      User?     @relation(fields: [userId], references: [id])
+  
+  expenses  Expense[]
+   fixedExpenses FixedExpense[] 
+  @@unique([name, userId]) //لمنع تكرار الفئات
 }
 
 model Expense {
@@ -27,7 +40,25 @@ model Expense {
   title     String
   amount    Float
   date      DateTime  @default(now())
-  category  String
+
+  categoryId  Int
   userId    Int
+
+  category    Category  @relation(fields: [categoryId], references: [id])
   user      User      @relation(fields: [userId], references: [id])
+}
+
+model FixedExpense {
+  id         Int      @id @default(autoincrement())
+  userId     Int
+  name       String
+  categoryId Int
+  amount     Float
+  dayOfMonth Int       // اليوم اللي ينخصم فيه المصروف
+  duration   Int       // عدد الأشهر اللي رح يستمر السحب
+  createdAt  DateTime  @default(now())
+  updatedAt  DateTime  @updatedAt
+
+  user       User      @relation(fields: [userId], references: [id])
+  category   Category  @relation(fields: [categoryId], references: [id])
 }

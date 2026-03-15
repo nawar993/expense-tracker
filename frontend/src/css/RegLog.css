@@ -1,0 +1,88 @@
+/* Container */
+.reglog-container{
+  padding:80px 0;
+}
+
+/* Row مع مسافة بين الفورمين */
+.reglog-container .row{
+  display:flex;
+  justify-content:center;
+  align-items:flex-start;
+  flex-wrap:wrap;
+  column-gap:40px; /* مسافة بين Login و Sign Up */
+}
+
+/* Cards */
+.auth-card{
+  padding:20px;
+  border-radius:16px;
+  box-shadow:0 4px 12px rgba(0,0,0,0.08);
+  margin-bottom:30px;
+  display:flex;
+  flex-direction:column;
+  justify-content:space-between;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+/* Hover subtle effect */
+.auth-card:hover{
+  transform: translateY(-5px);
+  box-shadow:0 10px 25px rgba(0,0,0,0.12);
+}
+
+/* Login Card أصغر شوي لإحساس ديناميكي */
+.login-card{
+  margin-top:20px;
+}
+
+/* Reduce width للـ Cards */
+.reglog-container .row > .col-md-4{
+  max-width:360px;
+}
+
+/* Gradient Buttons */
+.gradient-btn{
+  background: linear-gradient(135deg, #b19cd9, #9E7BFF) !important;
+  color:white !important;
+  border:none !important;
+  padding:10px 0 !important;
+  border-radius:8px !important;
+  font-weight:600;
+  box-shadow:0 6px 18px rgba(0,0,0,0.12);
+  transition:0.3s;
+}
+
+.gradient-btn:hover{
+  opacity:0.9;
+}
+
+/* Titles */
+.auth-card h3{
+  color:#444;
+  font-weight:600;
+  margin-bottom:20px;
+}
+
+/* Responsive للموبايل */
+@media (max-width:768px){
+  .reglog-container .row{
+    flex-direction: column; /* stacked */
+    align-items: center;
+    column-gap:0;
+  }
+
+  .reglog-container .row > .col-md-4{
+    max-width:90%; /* يملأ الشاشة بشكل لطيف */
+    margin-top:20px; /* مسافة رأسية بين الفورمين */
+  }
+
+  .login-card{
+    margin-top:0; /* إزالة الفرق عند stacked */
+  }
+}
+
+.contact-card {
+  max-width: 450px; /* أو 70% حسب المساحة */
+  width: 100%;
+  margin: 0 auto; /* لتوسيط الكارد */
+}

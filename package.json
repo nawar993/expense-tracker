@@ -20,5 +20,10 @@
   "homepage": "https://github.com/nawar993/expense-tracker#readme",
   "devDependencies": {
     "concurrently": "^9.2.1"
+  },
+  "dependencies": {
+    "jspdf": "^4.2.0",
+    "jspdf-autotable": "^5.0.7",
+    "xlsx": "^0.18.5"
   }
 }

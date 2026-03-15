@@ -1,0 +1,92 @@
+/* ---------- الصفحة ---------- */
+.dashboard-page {
+  position: relative;
+  min-height: 100vh;
+  padding: 20px;
+  background: linear-gradient(135deg, #f5f7fa 0%, #e5e7eb 40%, #d1d5db 100%);
+  transition: background-color 0.3s, color 0.3s;
+}
+.dashboard-page::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at 20% 20%, rgba(255,255,255,0.5), transparent 40%),
+    radial-gradient(circle at 80% 30%, rgba(255,255,255,0.4), transparent 40%),
+    radial-gradient(circle at 50% 80%, rgba(255,255,255,0.35), transparent 40%);
+  pointer-events: none;
+}
+
+/* ---------- عنوان الصفحة ---------- */
+.page-title {
+  font-size: 28px;
+  font-weight: 700;
+  color: #374151;
+  margin-bottom: 25px;
+}
+
+/* ---------- Dashboard Header Buttons ---------- */
+.dashboard-header { display:flex; align-items:flex-start; justify-content:space-between; flex-wrap:wrap; gap:10px; }
+.dashboard-buttons { display:flex; flex-direction:column; gap:8px; margin-bottom: 20px;}
+
+/* ---- صف الأزرار ---- */
+.dashboard-buttons .btn-row {
+  display: flex;
+  gap: 10px; /* مسافة 10px بين كل زر وآخر */
+  flex-wrap: wrap; /* إذا الشاشة ضيقة يتحول للسطر الثاني */
+}
+
+.dashboard-buttons .btn-row button {
+  transition: background-color 0.2s, transform 0.15s, box-shadow 0.15s;
+}
+
+.dashboard-buttons .btn-row button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 2px 6px rgba(0,0,0,0.12);
+}
+/* ---------- Limit Warning ---------- */
+.limit-warning { background-color:#ffebee; color:#b71c1c; }
+
+/* ---------- شبكة الكروت ---------- */
+.stats-row { display:grid; grid-template-columns:repeat(4,1fr); gap:16px; }
+
+/* ---------- الكروت ---------- */
+.dashboard-card {
+  background: rgba(255,255,255,0.9);
+  border-radius:14px;
+  padding:20px;
+  min-height:140px;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  position:relative;
+  box-shadow:0 4px 15px rgba(0,0,0,0.08);
+  transition:transform 0.2s, box-shadow 0.2s, background-color 0.3s, color 0.3s;
+}
+.dashboard-card:hover { transform:translateY(-4px); box-shadow:0 8px 22px rgba(0,0,0,0.12); }
+.dashboard-card h5 { font-size:14px; color:#6b7280; margin-bottom:6px; }
+.dashboard-card h3 { font-size:26px; font-weight:700; color:#374151; }
+.card-icon { position:absolute; top:10px; right:10px; font-size:28px; color:#9ca3af; margin-bottom:10px; }
+
+/* ---------- الرسم البياني ---------- */
+.chart-card { margin-top:25px; padding:25px; border-radius:14px; border:none; background:white; min-height:420px; box-shadow:0 4px 15px rgba(0,0,0,0.08); transition: background-color 0.3s, color 0.3s; }
+
+/* ---------- الوضع النهاري ---------- */
+.dashboard-page.light-mode { background:linear-gradient(135deg,#f5f7fa 0%,#e5e7eb 40%,#d1d5db 100%); color:#111827; }
+.dashboard-page.light-mode .dashboard-card,
+.dashboard-page.light-mode .chart-card { background-color:#ffffff; color:#111827; }
+
+/* ---------- الوضع الليلي ---------- */
+.dashboard-page.dark-mode { background-color:#1f2937; color:#f3f4f6; }
+.dashboard-page.dark-mode .dashboard-card,
+.dashboard-page.dark-mode .chart-card { background-color:#374151; color:#f3f4f6; }
+.dashboard-page.dark-mode .dashboard-card h5 { color:#d1d5db; }
+.dashboard-page.dark-mode .dashboard-card h3 { color:#f9fafb; }
+.dashboard-page.dark-mode .card-icon { color:#9ca3af; }
+
+/* ---------- زر الوضع الليلي ---------- */
+.dark-toggle-btn { padding:6px 14px; border:none; border-radius:8px; cursor:pointer; font-weight:600; transition:background 0.2s; }
+.dark-toggle-btn.light { background-color:#9ca3af; color:#111827; }
+.dark-toggle-btn.light:hover { background-color:#6b7280; }
+.dark-toggle-btn.dark { background-color:#374151; color:#f3f4f6; }
+.dark-toggle-btn.dark:hover { background-color:#4b5563; }

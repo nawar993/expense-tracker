@@ -1,0 +1,103 @@
+.table-container {
+  padding: 20px;
+}
+
+.styled-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 8px 12px;
+}
+
+.styled-table thead th {
+  background-color: #9ca3af;
+  color: white;
+  border: none;
+  padding: 12px;
+  text-align: center;
+  border-radius: 12px;
+}
+
+.header-cell {
+  background-color: #6b7280;
+  color: white;
+  border-radius: 12px;
+  padding: 12px;
+}
+
+/* الصف */
+.table-row {
+  background-color: #f5f7fa;
+  border-radius: 12px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+/* Hover يرفع الصف بالكامل */
+.table-row:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+}
+
+/* كل الخلايا */
+.styled-table td {
+  background: white;
+  border-radius: 10px;
+  padding: 12px;
+  text-align: center;
+  vertical-align: middle; /* توسيط عمودي */
+}
+
+.styled-table td:last-child {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 24px; /* المسافة بين الأيقونات */
+    padding: 20px;
+
+}
+
+/* Title ملون */
+.title-cell {
+  color: white;
+  font-weight: 600;
+  border-radius: 12px;
+  padding: 12px;
+}
+
+/* الأيقونات */
+.action-icon {
+  font-size: 18px;
+  cursor: pointer;
+  display: inline-flex;       /* مهم لتوسيط عمودي */
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  transition: transform 0.15s, color 0.15s;
+  
+}
+
+.edit-icon {
+  color: #9ca3af;
+}
+
+.delete-icon {
+  color: #ef4444;
+}
+
+.action-icon:hover {
+  transform: scale(1.2);
+}
+
+.edit-icon:hover {
+  color: #2563eb;
+}
+
+.delete-icon:hover {
+  color: #dc2626;
+}
+
+/* خلايا البيانات العادية */
+.data-cell {
+  text-align: center;
+  padding: 12px;
+}

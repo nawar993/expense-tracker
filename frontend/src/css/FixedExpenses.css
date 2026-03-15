@@ -1,0 +1,130 @@
+.fixed-expenses-page {
+  padding: 20px 30px; /* مسافة حول المحتوى */
+}
+
+/* محتوى الصفحة فوق الخلفية */
+.page-content {
+  padding: 25px 35px;
+  position: relative;
+  background: transparent; /* تأكد أنها شفافة */
+  min-height: 100vh;
+}
+
+/* ========= Page Header ========= */
+.page-header {
+  background: linear-gradient(135deg, #b19cd9, #9E7BFF);
+  padding: 18px 22px;
+  border-radius: 12px;
+  margin-bottom: 20px;  
+  color: white;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+}
+
+.page-header .page-title {
+  margin: 0;
+  font-weight: 600;
+  font-size: 28px;
+}
+
+/* زر العنوان */
+.page-header .btn {
+  background: white;
+  color: #4f46e5;
+  border: none;
+  font-weight: 500;
+}
+
+.page-header .btn:hover {
+  background: #f3f4f6;
+  cursor: pointer;
+}
+
+/* حاوية الجدول */
+.table-container {
+  padding: 20px;
+  overflow-x: auto;
+}
+
+/* الجدول */
+.styled-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 8px 12px;
+  min-width: 600px;
+}
+
+/* رؤوس الجدول */
+.styled-table thead th {
+  background-color: #6b7280;
+  color: white;
+  border: none;
+  padding: 12px;
+  text-align: center;
+  border-radius: 12px;
+}
+
+/* الصفوف */
+.table-row {
+  background-color: #f5f7fa;
+  border-radius: 12px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.table-row:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+}
+
+/* خلايا البيانات */
+.styled-table td {
+  background: white;
+  border-radius: 10px;
+  padding: 12px;
+  text-align: center;
+  vertical-align: middle;
+}
+
+/* أول عمود ملون */
+.title-cell {
+  color: white;
+  font-weight: 600;
+  border-radius: 12px;
+  padding: 12px;
+}
+
+/* عمود الأوامر */
+.styled-table td:last-child {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  padding: 12px;
+}
+
+.action-icon {
+  font-size: 18px;
+  cursor: pointer;
+  transition: transform 0.15s, color 0.15s;
+}
+
+.edit-icon { color: #2563eb; }
+.delete-icon { color: #ef4444; }
+
+.action-icon:hover {
+  transform: scale(1.2);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .page-header .page-title {
+    font-size: 24px;
+  }
+}
+/* وضع الخلفية على كل الصفحة */
+
+
+.page-header h2 {
+  margin: 0;
+  font-weight: 600;
+}

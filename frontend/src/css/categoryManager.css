@@ -1,0 +1,50 @@
+.category-btn {
+  border: none;
+  color: white;
+  padding: 6px 14px;
+  border-radius: 8px;
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+}
+
+/* أزرار الإضافة والتعديل والحفظ - ألوان أزرق من labelColors */
+.category-btn.add {
+  background: #b19cd9; /* لون أول من labelColors */
+}
+
+.category-btn.edit {
+  background: #9E7BFF; /* لون ثاني من labelColors */
+}
+
+.category-btn.save {
+  background: #4d87fd; /* لون ثالث من labelColors */
+}
+
+.category-btn.add:hover,
+.category-btn.edit:hover,
+.category-btn.save:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.12);
+}
+
+/* زر الحذف - أحمر كما كان */
+.category-btn.delete {
+  background: #FF4E4E;
+}
+
+.category-btn.delete:hover {
+  background: #FF6B6B;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.12);
+}
+
+/* أزرار ثانوية */
+.category-btn.cancel {
+  background: #ccc;
+  color: #333;
+}
+
+.category-btn.close {
+  background: #aaa;
+  color: #fff;
+}

@@ -1,0 +1,67 @@
+.profile-card {
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+  background-color: white;
+  transition: all 0.2s ease-in-out;
+}
+
+.profile-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.gradient-btn {
+  background: linear-gradient(135deg, #b19cd9, #9E7BFF);
+  border: none;
+  color: white;
+  padding: 10px 0;
+  border-radius: 8px;
+  transition: all 0.2s ease-in-out;
+}
+
+.gradient-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.12);
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+  .profile-card {
+    margin-bottom: 20px;
+  }
+}
+
+.avatar-wrapper{
+  position: relative;
+  width: 120px;
+  margin: auto;
+}
+
+.avatar-image{
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+}
+
+.avatar-edit-btn{
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background: linear-gradient(135deg,#b19cd9,#9E7BFF);
+  color: white;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 14px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  transition: 0.2s;
+}
+
+.avatar-edit-btn:hover{
+  transform: scale(1.1);
+}

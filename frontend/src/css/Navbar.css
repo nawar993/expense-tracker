@@ -1,0 +1,62 @@
+.main-navbar{
+  background-color: #f8f9fa; 
+  box-shadow:0 4px 10px rgba(0,0,0,0.05);
+  padding:10px 20px;
+  position:sticky;
+  top:0;
+  z-index:1000;
+}
+
+.logo{
+  font-weight: bold;
+  font-size: 1.5rem;
+  color: #4d87fd;
+}
+
+/* Links */
+.main-navbar .nav-link {
+  color: #333;
+  margin-right: 15px;
+  transition: all 0.2s ease-in-out;
+}
+
+.main-navbar .nav-link:hover {
+  color: #9E7BFF; 
+  text-decoration: underline;
+}
+
+/* Gradient Buttons (Login / Logout / etc) */
+.main-navbar .login-btn,
+.main-navbar .logout-btn {
+  background: linear-gradient(135deg, #b19cd9, #9E7BFF);
+  border: none;
+  color: white;
+  padding: 6px 18px;
+  border-radius: 8px;
+  transition: all 0.2s ease-in-out;
+}
+
+.main-navbar .login-btn:hover,
+.main-navbar .logout-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.12);
+}
+
+#profile-dropdown .dropdown-item {
+  transition: background 0.2s ease-in-out;
+}
+
+#profile-dropdown .dropdown-item:hover {
+  background-color: #e3d7ff;
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+  .main-navbar .nav-link,
+  .main-navbar .login-btn,
+  .main-navbar .logout-btn {
+    margin-right: 0;
+    margin-top: 5px;
+  }
+}
+

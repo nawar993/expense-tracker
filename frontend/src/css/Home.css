@@ -1,0 +1,319 @@
+.home-page{
+background:#f8f9fa;
+}
+
+/* NAVBAR */
+
+.main-navbar{
+background:#ffffff;
+box-shadow:0 2px 8px rgba(0,0,0,0.05);
+padding:14px 0;
+position:sticky;
+top:0;
+z-index:1000;
+}
+
+.logo{
+font-weight:700;
+font-size:20px;
+color:#444;
+}
+
+/* links */
+
+.main-navbar .nav-link{
+margin-left:20px;
+color:#555 !important;
+font-weight:500;
+transition:0.3s;
+}
+
+.main-navbar .nav-link:hover{
+color:#9E7BFF !important;
+}
+
+
+/* login */
+
+.login-btn{
+margin-left:25px;
+background:transparent !important;
+border:1px solid #9E7BFF !important;
+color:#9E7BFF !important;
+padding:6px 18px;
+border-radius:6px;
+transition:0.3s;
+}
+
+.login-btn:hover{
+background:#9E7BFF !important;
+color:white !important;
+}
+
+/* signup */
+
+.signup-btn{
+margin-left:10px;
+background:#9E7BFF !important;
+border:none !important;
+color:white !important;
+padding:6px 18px;
+border-radius:6px;
+transition:0.3s;
+}
+
+.signup-btn:hover{
+background:#b19cd9 !important;
+}
+
+
+/* HERO */
+
+/* ====== Hero Section ====== */
+.hero-section{
+  background: linear-gradient(135deg, #b19cd9 0%, #56A5EC 100%); /* تدرج متناسق مع الموقع */
+  color: white;
+  padding: 100px 0;
+  overflow: hidden;
+}
+
+/* Background light circles */
+.hero-section::before{
+  content:"";
+  position:absolute;
+  width:300px;
+  height:300px;
+  background:#9E7BFF;
+  filter:blur(150px);
+  opacity:0.25;
+  top:50px;
+  left:50px;
+  border-radius:50%;
+  z-index:0;
+}
+
+.hero-section::after{
+  content:"";
+  position:absolute;
+  width:300px;
+  height:300px;
+  background:#2ccaff;
+  filter:blur(150px);
+  opacity:0.25;
+  bottom:50px;
+  right:50px;
+  border-radius:50%;
+  z-index:0;
+}
+
+/* محتوى Hero فوق الخلفية */
+.hero-section .container{
+  position: relative;
+  z-index: 2;
+}
+
+
+/* Title */
+.hero-title{
+  font-size: 48px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #ffffff;
+}
+.hero-title span{
+  color: #2ccaff;
+}
+
+/* Text */
+.hero-text{
+  font-size: 18px;
+  color: #e0e0e0;
+  margin-bottom: 30px;
+}
+
+/* Buttons */
+.hero-buttons{
+  display: flex;
+  gap: 15px;
+  margin-bottom: 25px;
+}
+
+.hero-btn{
+  background: #2ccaff !important;
+  border: none !important;
+  color: white !important;
+  font-weight: 600;
+  padding: 12px 26px;
+  transition: background 0.3s ease;
+}
+.hero-btn:hover{
+  background: #56A5EC !important;
+}
+
+.hero-btn-outline{
+  border: 2px solid #2ccaff !important;
+  background: transparent !important;
+  color: #ffff !important;
+  padding: 10px 26px;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+.hero-btn-outline:hover{
+  background: rgba(44, 202, 255, 0.15) !important;
+}
+
+/* Hero Points */
+.hero-points{
+  list-style: none;
+  padding: 0;
+  margin-top: 15px;
+}
+.hero-points li{
+  font-size: 16px;
+  margin-bottom: 8px;
+  color: #f0f0f0;
+}
+
+/* ===== Dashboard Card ===== */
+.hero-dashboard-card{
+  background: rgba(255,255,255,0.15);
+  backdrop-filter: blur(15px);
+  border-radius: 20px;
+  padding: 20px;
+  display: inline-block;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+  animation: float 6s ease-in-out infinite;
+}
+
+.hero-dashboard-card:hover{
+  transform: translateY(-10px) scale(1.03);
+  box-shadow: 0 25px 50px rgba(0,0,0,0.15);
+}
+
+.hero-dashboard-image{
+  width: 100%;
+  max-width: 400px;
+  border-radius: 15px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+  transition: transform 0.5s ease;
+}
+
+/* Floating animation */
+@keyframes float{
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-8px); }
+  100% { transform: translateY(0px); }
+}
+
+/* ===== FEATURES ===== */
+.features-section{
+  padding:90px 0;
+  background:white;
+}
+
+.section-title{
+  margin-bottom:50px;
+  font-weight:700;
+}
+
+.feature-card{
+  text-align:center;
+  border:none;
+  padding:25px;
+  border-radius:14px;
+  transition: transform 0.3s, box-shadow 0.3s;
+  box-shadow:0 10px 25px rgba(0,0,0,0.05);
+}
+
+.feature-card:hover{
+  transform: translateY(-10px);
+  box-shadow:0 15px 35px rgba(0,0,0,0.1);
+}
+
+.feature-icon{
+  font-size:40px;
+  margin-bottom:15px;
+}
+
+
+/* CTA Section */
+.cta-section {
+  padding: 80px 0;
+  background: linear-gradient(135deg, #b19cd9 0%, #56A5EC 100%); /* تدرج متناسق مع الموقع */
+  color: white;
+  text-align: center;
+  border-radius: 12px;
+}
+
+.cta-section h2 {
+  margin-bottom: 25px;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+/* زر CTA */
+.cta-btn {
+  margin-top: 20px;
+  padding: 12px 32px;
+  background-color: #b19cd9 !important; /* لون رئيسي من labelColors */
+  color: white;
+  border: none;
+  font-weight: 600;
+  border-radius: 8px;
+  transition: 0.3s;
+}
+
+.cta-btn:hover {
+  background-color: #9E7BFF !important; /* لون hover متناسق */
+}
+
+/* FOOTER */
+
+.footer {
+  background: #373d45;
+  color: #e0e0e0;
+  padding: 40px 10px;
+  font-size: 0.95rem;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 1100px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.footer-section {
+  flex: 1 1 220px;
+  margin: 10px 5px;
+}
+
+.footer-section h5 {
+  color: #b19cd9;
+  margin-bottom: 10px;
+}
+
+.footer-link {
+  color: #9E7BFF;
+  text-decoration: none;
+  margin: 0 5px;
+  transition: 0.3s;
+}
+
+.footer-link:hover {
+  color: #56A5EC;
+}
+
+/* Responsive: على الشاشات الصغيرة، كل قسم يظهر بشكل عمودي */
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-section {
+    margin: 10px 0;
+  }
+}

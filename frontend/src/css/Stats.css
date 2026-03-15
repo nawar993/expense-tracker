@@ -1,0 +1,75 @@
+/* ===== STATS ===== */
+.stats-section {
+  padding: 80px 0;
+  background: #f8f9fa; /* رمادي فاتح */
+}
+
+.stats-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+}
+
+.stat-card {
+  background: white;
+  border-radius: 12px;
+  padding: 25px 20px;
+  flex: 1 1 220px; /* يأخذ مساحة مناسبة ويصبح متجاوب */
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s, box-shadow 0.3s;
+  min-width: 200px;
+}
+
+
+.stat-card h3 {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.stat-card p {
+  font-size: 16px;
+  color: #555;
+}
+
+.stat-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.1);
+}
+
+/* ألوان حسب النوعية */
+.stat-card.fixed h3 { color: #b19cd9; }
+.stat-card.variable h3 { color: #9E7BFF; }
+.stat-card.this-month h3 { color: #4d87fd; }
+.stat-card.remaining h3 { color: #56A5EC; }
+
+/* للعرض في صفوف متجاوبة */
+.stats-section .row {
+  justify-content: center;
+  gap: 15px;
+}
+
+/* نصوص تشجيعية إذا لا يوجد بيانات */
+.stats-section .no-data {
+  font-size: 18px;
+  color: #777;
+  margin-bottom: 15px;
+}
+
+
+
+/* ألوان أزرار Stats */
+.stats-section .site-btn {
+  background-color: #b19cd9 !important; /* اللون الأساسي من labelColors */
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  transition: 0.3s;
+}
+
+.stats-section .site-btn:hover {
+  background-color: #9E7BFF !important; /* لون hover متناسق من labelColors */
+}
